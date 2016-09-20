@@ -1,0 +1,17 @@
+<ul role="menu" class="sub-menu">
+    <asp:SqlDataSource ID="SqlDSMainCategory" runat="server" 
+        SelectCommand="Select * From Category Where Parent = 0"
+        ConnectionString="<%$ ConnectionStrings:OnlineStoreConnectionString %>"></asp:SqlDataSource>
+	<asp:DataList ID="dlMainCategory" runat="server" DataSourceID="SqlDSMainCategory" 
+		RepeatDirection="Vertical">
+		<ItemTemplate>
+			<li><a href="Category.aspx?MainCatId=<%# Eval("Id")%>&MainCatName=<%# Eval("CategoryName")%>"><%# Eval("CategoryName") %></a></li>                    
+		</ItemTemplate>
+	</asp:DataList>  
+</ul>
+
+Protected Sub Page_Load(sender As Object, e As EventArgs) Handles Me.Load
+    If Request.QueryString("MainCatID") <> "" Then
+        SqlDSSubCategory.SelectCommand = "Select * From Category Where Parent = " & Request.QueryString("MainCatID")
+    End If
+End Sub

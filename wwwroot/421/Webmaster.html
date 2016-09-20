@@ -1,0 +1,116 @@
+<!Doctype HTML>
+<Html>
+	<head>
+		<title>Shane's Photoshop Project</title>
+		<link rel="stylesheet" type="text/css" href="global.css">
+		<!-- Meta  -->
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<!-- Page styles -->
+		<link rel="stylesheet" href="libraries/bootstrap/dist/css/bootstrap.min.css">
+		<link rel="stylesheet" href="libraries/flexslider/flexslider.css">
+		<!-- Page Scripts -->
+		<script src="libraries/jquery/dist/jquery.min.js"></script>
+		<script src="libraries/bootstrap/dist/js/bootstrap.min.js"></script>
+		<!-- Modernizr -->
+		<script src="scripts/modernizr.js"></script>
+	</head>
+	<body>
+		<div id="wrapper">
+
+			<!-- Logo+Heading -->
+			<div align="center">
+				<div class="image">
+					<img src="./img/banner2.png" alt="banner" height=100%; width=100%>
+					<div class="overlay">
+						<h11>100 Not So Famous Views </h11>
+					</div>
+				</div>
+			</div>
+			<div id="container">
+				<!-- nav -->
+				<nav class="navbar navbar-inverse navbar-fixed-top">
+					<div class="container">
+						<div class="navbar-header">
+							<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navHam" aria-expanded="false">
+								<span class="sr-only">Toggle navigation</span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+							</button>
+							<a class="navbar-brand" href="home.html">
+								<img src="img/logo.png" alt="syLogo" style= "margin-top:-5px"; width = "30px"; height = "30px">
+							</a>
+						</div>
+						<div class="collapse navbar-collapse" id="navHam">
+							<ul class="nav navbar-nav navbar-right">
+								<li><a href= Home.html>Home</a></li>
+								<li><a href="Gallery.html">Gallery</a></li>
+								<li><a href="Video.html">Video</a></li>
+								<li><a href="Webmaster.html">Webmaster</a></li>
+								<li><a href="Manipulations.html">Manipulations</a></li> 
+							</ul>
+						</div><!-- /.navbar-collapse -->
+					</div><!-- /.container-fluid -->
+				</div>
+			</nav>
+				<!-- content -->
+				<div ID = "h1">
+					<h1>Webmaster</h1>
+				</div>
+				<div class="container">
+					<div class="row">
+						<br>
+						<br>
+						<br>
+						<br>
+						<br>
+
+						<p>Hello! My name is Shane Yang and at the time of creating this project I was a  fourth year Computer Information Systems student at Califorina State University Polytechnic, Pomona. I plan to pursue a carreer in application development.</p>
+						<div class="row">
+							<div class="col-xs-6 col-md-4">
+								<a data-toggle="modal" data-target="#imgmod" data-whatever="img/certificate.PNG"> <img src="./img/certificate.PNG" alt="certificate" class="img-responsive"></a>
+							</div>
+							<div class="col-xs-6 col-md-4">
+								<a data-toggle="modal" data-target="#imgmod" data-whatever="img/flying over effile tower.jpg"><img src="./img/flying over effile tower.jpg" height="auto"; alt="flying over effile tower" class="img-responsive" ></a>
+							</div>
+							<div class="col-xs-6 col-md-4">
+								<a data-toggle="modal" data-target="#imgmod" data-whatever="img/Aworhal.jpg" ><img src="./img/Aworhal.jpg" alt="Aworhal"  class="img-responsive "><a>
+								</div>
+							</div>
+							<br>
+							<div class="modal fade" id="imgmod" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" style=" top:10%; text-align: center">
+								<div class="modal-dialog modal-lg" style="display: inline-block;
+								text-align: left;
+								vertical-align: middle; width:auto;">
+								<div class="modal-content">
+									<img src="" id = "imgsrc" class="img-responsive">
+								</div>
+							</div>
+						</div>
+
+						<h3>Wave Webaim Screenshot Video Page</h3>
+						<img src="./img/Gallery/Wave.webaim.PNG" alt="Wave Webaim" height="auto"; width = 100%;>
+					</div>
+					<p>Source: http://cdn.history.com/sites/2/2015/04/hith-eiffel-tower-iStock_000016468972Large.jpg</p>
+				</div>
+
+				<div id="footer">
+					&copy;2015 Shane&nbsp;
+				</div>
+			</div><!--Wrapper-->
+		</body>
+		<script>
+			$('#imgmod').on('show.bs.modal', function (event) {
+  			var img = $(event.relatedTarget) // Button that triggered the modal
+  			var imgLoc = img.data('whatever') // Extract info from data-* attributes
+  			// If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
+  			// Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
+  			var modal = $(this)
+  			$('#imgsrc').attr('src', imgLoc);
+  		})
+  	</script>
+  	<footer>
+  	</footer>
